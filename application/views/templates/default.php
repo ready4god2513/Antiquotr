@@ -2,6 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>AntiQuotr | Did they really say that?!</title>
+<meta name="description" content="Some of the best quotes in the world are out of context.  We do it on purpose." />
+<meta name="keywords" content="Great Quotes, Funny Quotations, Anti-Quotes, Humor" />
 <?=html::stylesheet('public/css/application')?>
 </head>
 <body>
