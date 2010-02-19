@@ -61,7 +61,7 @@ $config['internal_cache_key'] = 'foobar-changeme';
  *
  * Do not enable this option if you are using output compression in php.ini!
  */
-$config['output_compression'] = TRUE;
+$config['output_compression'] = 9;
 
 /**
  * Enable or disable global XSS filtering of GET, POST, and SERVER data. This
