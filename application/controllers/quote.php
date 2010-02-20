@@ -5,6 +5,7 @@ class Quote_Controller extends Template_Controller
 	
 	public $template = 'templates/default';
 	
+	
 	public function __construct()
 	{
 		parent::__construct();
@@ -42,7 +43,16 @@ class Quote_Controller extends Template_Controller
 	
 	public function create()
 	{
-		$this->quote->create($this->input->post('quote'), $this->author->random());
+		if($this->quote->create($this->input->post('quote'), $this->author->random()))
+		{
+			Session::instance()->set('success', 'Great scott!  That quote is awesome! -Me');
+		}
+		else
+		{
+			Session::instance()->set('error', 'That is lamest quote ever. Fix it now. - Your mom');
+		}
+		
+		url::redirect('');
 	}
 	
 }

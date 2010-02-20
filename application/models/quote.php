@@ -13,8 +13,20 @@ class Quote_Model extends ORM
 	 */
 	public function random()
 	{
-		return $this->orderby(NULL, 'RAND()')->find();
+		return $this->where('active', true)->orderby(NULL, 'RAND()')->find();
 	}
+	
+	
+	/**
+	 * Find all pending quotes
+	 * @Developer Brandon Hansen
+	 * @Date February 19, 2010
+	 * @Return ORM_Iterator_Object
+	 */
+	 public function find_all_pending()
+	 {
+	 	return $this->where('active', false)->find_all();
+	 }
 	
 	
 	/**
@@ -40,7 +52,6 @@ class Quote_Model extends ORM
 	public function create($quote, Author_Model $author)
 	{
 		$quote = trim($quote);
-		
 		
 		if(!$quote)
 		{

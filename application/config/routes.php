@@ -3,3 +3,8 @@
 
 $config['_default'] = 'quote';
 $config['new'] = 'quote/new_';
+$config['create'] = 'quote/create';
+$config['save'] = 'quote/save';
+$config['feed'] = 'quote/feed';
+$config['author'] = 'authors/new_';
+$config['([0-9]+)'] = 'quote/view/$1';

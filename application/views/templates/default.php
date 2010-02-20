@@ -7,29 +7,35 @@
 <?=html::stylesheet('public/css/application')?>
 </head>
 <body>
-	<script type="text/javascript"><!--
-		google_ad_client = "pub-7212370815157358";
-		/* 300x250, created 2/19/10 */
-		google_ad_slot = "3423984455";
-		google_ad_width = 300;
-		google_ad_height = 250;
-		//-->
-	</script>
 	
-	<div id="container">
-		<?=$body?>
+	<div id="container" class="middle">
+		<div id="logo" class="left">
+			<?=html::anchor('', html::image('public/images/logo.png'))?>
+		</div>
+		
+		<div class="links right">
+			<?=html::anchor('new', 'New Quote')?>
+			<?=html::anchor('author', 'New Author')?>
+		</div>
+		
+		<div class="clear"></div>
+	
+		<div class="main">
+			<?=$body?>
+		</div>
+			
+		<script type="text/javascript"><!--
+			google_ad_client = "pub-7212370815157358";
+			/* 300x250, created 2/19/10 */
+			google_ad_slot = "5905318316";
+			google_ad_width = 468;
+			google_ad_height = 60;
+			//-->
+		</script>
+		<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
 	</div>
 	
-	<script type="text/javascript"><!--
-		google_ad_client = "pub-7212370815157358";
-		/* 300x250, created 2/19/10 */
-		google_ad_slot = "3423984455";
-		google_ad_width = 300;
-		google_ad_height = 250;
-		//-->
-	</script>
 	
-	<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
 	
 	<script type="text/javascript">
 		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
