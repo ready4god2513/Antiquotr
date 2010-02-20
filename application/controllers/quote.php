@@ -16,20 +16,33 @@ class Quote_Controller extends Template_Controller
 	public function index()
 	{
 		$this->template->body = View::factory('quote/view')
-			->set('quote', $this->quote->random())
-			->set('author', $this->author->random());
+			->set('quote', $this->quote->random());
 	}
 	
-	public function view($quote, $author)
+	
+	public function view($id = '')
 	{
 		$this->template->body = View::factory('quote/view')
-			->set('quote', $this->quote->find_by_id($quote))
-			->set('author', $this->author->find_by_id($author));
+			->set('quote', $this->quote->find_by_id($id));
 	}
+	
+	
+	public function missing()
+	{
+		header('HTTP/1.1 404 File Not Found');
+		$this->template->body = View::factory('quote/missing');
+	}
+	
+	
+	public function new_()
+	{
+		$this->template->body = View::factory('quote/create');
+	}
+	
 	
 	public function create()
 	{
-		$this->template->body = View::factory('quote/create');
+		$this->quote->create($this->input->post('quote'), $this->author->random());
 	}
 	
 }

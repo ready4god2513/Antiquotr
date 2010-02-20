@@ -16,7 +16,9 @@
 		//-->
 	</script>
 	
-	<?=$body?>
+	<div id="container">
+		<?=$body?>
+	</div>
 	
 	<script type="text/javascript"><!--
 		google_ad_client = "pub-7212370815157358";

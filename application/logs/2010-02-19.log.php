@@ -46,3 +46,5 @@ LIMIT 0, 1' at line 3 - SELECT `authors`.*
 FROM (`authors`)
 ORDER BY `authors`.`id` RAND()
 LIMIT 0, 1 in file system/libraries/drivers/Database/Mysql.php on line 371
+2010-02-19 16:11:26 -08:00 --- error: Uncaught Kohana_404_Exception: The page you requested, new, could not be found. in file system/core/Kohana.php on line 841
+2010-02-19 16:21:35 -08:00 --- error: Uncaught Kohana_Exception: Invalid method search called in Quote_Model in file system/libraries/ORM.php on line 257

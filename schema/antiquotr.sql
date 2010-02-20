@@ -18,6 +18,7 @@ DROP TABLE IF EXISTS `quotes`;
 CREATE TABLE `quotes` (
   `id` int(11) NOT NULL auto_increment,
   `quote` varchar(500) NOT NULL,
+  `author_id` int(11) NOT NULL,
   `active` tinyint(4) NOT NULL,
   `created_at` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
   PRIMARY KEY  (`id`),
@@ -50,6 +51,16 @@ CREATE TABLE `roles_users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
+DROP TABLE IF EXISTS `sessions`;
+
+CREATE TABLE `sessions` (
+  `session_id` varchar(127) NOT NULL,
+  `last_activity` int(10) unsigned NOT NULL,
+  `DATA` text NOT NULL,
+  PRIMARY KEY  (`session_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+
 DROP TABLE IF EXISTS `user_tokens`;
 
 CREATE TABLE `user_tokens` (
@@ -79,16 +90,6 @@ CREATE TABLE `users` (
   UNIQUE KEY `uniq_username` (`username`),
   UNIQUE KEY `uniq_email` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-
-DROP TABLE IF EXISTS `sessions`;
-
-CREATE TABLE `sessions` (
-  `session_id` varchar(127) NOT NULL,
-  `last_activity` int(10) unsigned NOT NULL,
-  `DATA` text NOT NULL,
-  PRIMARY KEY  (`session_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 
 SET FOREIGN_KEY_CHECKS = 1;
