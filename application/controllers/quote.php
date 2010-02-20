@@ -27,4 +27,9 @@ class Quote_Controller extends Template_Controller
 			->set('author', $this->author->find_by_id($author));
 	}
 	
+	public function create()
+	{
+		$this->template->body = View::factory('quote/create');
+	}
+	
 }
