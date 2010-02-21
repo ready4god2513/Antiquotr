@@ -15,8 +15,9 @@
 		</div>
 		
 		<div class="links right">
-			<?=html::anchor('new', 'New Quote')?>
-			<?=html::anchor('author', 'New Author')?>
+			<?=html::anchor('', 'Give Me Another')?>
+			<?=html::anchor('new', 'Add Quote')?>
+			<?=html::anchor('author', 'Add Author')?>
 		</div>
 		
 		<div class="clear"></div>
