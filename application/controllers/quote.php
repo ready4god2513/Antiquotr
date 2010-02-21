@@ -21,6 +21,15 @@ class Quote_Controller extends Template_Controller
 	}
 	
 	
+	public function feed()
+	{
+		$this->auto_render = false;
+		View::factory('quote/feed')
+			->set('quotes', $this->quote->find_most_recent())
+			->render(true);
+	}
+	
+	
 	public function view($id = '')
 	{
 		$this->template->body = View::factory('quote/view')
@@ -37,13 +46,20 @@ class Quote_Controller extends Template_Controller
 	
 	public function new_()
 	{
-		$this->template->body = View::factory('quote/create');
+		$this->template->body = View::factory('quote/create')
+			->set('authors', $this->author->select_list('id', 'name'));
 	}
 	
 	
 	public function create()
 	{
-		if($this->quote->create($this->input->post('quote'), $this->author->random()))
+		$author = $this->author->find_by_id($this->input->post('author'));
+		if(!$author->loaded)
+		{
+			$author = $this->author->random();
+		}
+		
+		if($this->quote->create($this->input->post('quote'), $author))
 		{
 			Session::instance()->set('success', 'Great scott!  That quote is awesome! -Me');
 		}

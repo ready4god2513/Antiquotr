@@ -18,15 +18,27 @@ class Quote_Model extends ORM
 	
 	
 	/**
-	 * Find all pending quotes
-	 * @Developer Brandon Hansen
-	 * @Date February 19, 2010
-	 * @Return ORM_Iterator_Object
-	 */
-	 public function find_all_pending()
-	 {
-	 	return $this->where('active', false)->find_all();
-	 }
+	* Find all pending quotes
+	* @Developer Brandon Hansen
+	* @Date February 19, 2010
+	* @Return ORM_Iterator_Object
+	*/
+	public function find_all_pending()
+	{
+ 		return $this->where('active', false)->find_all();
+	}
+	 
+	 
+	/**
+	* Find the most recent 20 quotes
+	* @Developer Brandon Hansen
+	* @Date February 19, 2010
+	* @Return ORM_Iterator_Object
+	*/
+	public function find_most_recent()
+	{
+ 		return $this->where('active', true)->orderby('created_at', 'DESC')->find_all(20);
+	}
 	
 	
 	/**

@@ -3,6 +3,7 @@
 class Author_Model extends ORM
 {
 	protected $belongs_to = array('quote');
+	protected $sorting = array('name' => 'ASC');
 	
 	
 	/**
@@ -27,6 +28,18 @@ class Author_Model extends ORM
 	 {
 	 	return $this->where('active', false)->find_all();
 	 }
+	 
+	 
+	 /** 
+	 * Find an author by ID
+	 * @Developer Brandon Hansen
+	 * @Date Febuary 19, 2010
+	 * @Return Quote_Model
+	 */
+	public function find_by_id($id)
+	{
+		return $this->where('id', $id)->find();
+	}
 	
 	
 	/**
