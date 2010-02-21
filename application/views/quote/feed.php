@@ -6,7 +6,7 @@
     <?php foreach($quotes as $quote) { ?>
     <item>
         <title><?=$quote->author->name?> : <?=quote::truncate($quote->quote)?></title>
-        <link><?=url::site($quote->id)?></link>
+        <link><?=$quote->permalink()?></link>
         <description><?=quote::truncate($quote->quote)?></description>
         <author><?=$quote->author->name?></author>
         <pubDate><?=date("D, d M Y H:i:s T", strtotime($quote->created_at))?></pubDate>

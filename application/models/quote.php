@@ -16,6 +16,17 @@ class Quote_Model extends ORM
 		return $this->where('active', true)->orderby(NULL, 'RAND()')->find();
 	}
 	
+	/**
+	 * Set up the permalink for a given quote
+	 * @Developer Brandon Hansen
+	 * @Date Febuary 20, 2010
+	 * @Return string
+	 */
+	 public function permalink()
+	 {
+	 	return url::site($this->id . '/' . $this->quote . ' - ' . $this->author->name);
+	 }
+	
 	
 	/**
 	* Find all pending quotes
