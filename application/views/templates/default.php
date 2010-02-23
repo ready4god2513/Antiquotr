@@ -19,6 +19,7 @@
 			<?=html::anchor('all', 'See All')?>
 			<?=html::anchor('new', 'Add Quote')?>
 			<?=html::anchor('author', 'Add Author')?>
+			<?=html::anchor('blog', 'Blog')?>
 		</div>
 		
 		<div class="clear"></div>
