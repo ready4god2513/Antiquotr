@@ -22,6 +22,11 @@
 		</div>
 		
 		<div class="clear"></div>
+		
+		<div class="right">
+			<?=View::factory('share')?>
+		</div>
+		<div class="clear"></div>
 	
 		<div class="main">
 			<?=$body?>
