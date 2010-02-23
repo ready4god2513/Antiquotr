@@ -21,6 +21,13 @@ class Quote_Controller extends Template_Controller
 	}
 	
 	
+	public function all()
+	{
+		$this->template->body = View::factory('quote/index')
+			->set('quotes', $this->quote->find_all());
+	}
+	
+	
 	public function feed()
 	{
 		$this->auto_render = false;

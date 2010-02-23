@@ -3,6 +3,7 @@
 class Quote_Model extends ORM
 {
 	protected $has_one = array('author');
+	protected $sorting = array('created_at' => 'DESC');
 	
 	
 	/**

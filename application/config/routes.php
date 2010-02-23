@@ -8,3 +8,4 @@ $config['create'] = 'quote/create';
 $config['save'] = 'quote/save';
 $config['feed'] = 'quote/feed';
 $config['author'] = 'authors/new_';
+$config['all'] = 'quote/all';

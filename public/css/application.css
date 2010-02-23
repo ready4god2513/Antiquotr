@@ -12,6 +12,7 @@ a:focus{outline:none}
 body{background:#3B4A58;color:#fff;font-family:georgia;margin:0}
 div.main{margin:50px 0}
 div.middle{margin:0 auto;width:800px}
+div.quote-box{margin:50px 0}
 fieldset,img{border:none}
 input[type=submit]{background:#3B4A47;border:1px solid #3B4A69;color:#fff;font-size:1.1em;margin:5px 0;padding:5px}
 input[type=text]{font-size:1.2em;padding:3px;width:100%}
