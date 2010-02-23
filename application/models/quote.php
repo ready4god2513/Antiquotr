@@ -6,6 +6,15 @@ class Quote_Model extends ORM
 	protected $sorting = array('created_at' => 'DESC');
 	
 	
+	public function __construct($id = '')
+	{
+		parent::__construct($id);
+		
+		// Only find active quotes by default
+		$this->where('active', true);
+	}
+	
+	
 	/**
 	 * Find a random quote
 	 * @Developer Brandon Hansen
@@ -49,7 +58,7 @@ class Quote_Model extends ORM
 	*/
 	public function find_most_recent()
 	{
- 		return $this->where('active', true)->orderby('created_at', 'DESC')->find_all(20);
+ 		return $this->orderby('created_at', 'DESC')->find_all(20);
 	}
 	
 	

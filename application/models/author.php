@@ -6,6 +6,15 @@ class Author_Model extends ORM
 	protected $sorting = array('name' => 'ASC');
 	
 	
+	public function __construct($id = '')
+	{
+		parent::__construct($id);
+		
+		// Only find active quotes by default
+		$this->where('active', true);
+	}
+	
+	
 	/**
 	 * Find a random author
 	 * @Developer Brandon Hansen
@@ -14,7 +23,7 @@ class Author_Model extends ORM
 	 */
 	public function random()
 	{
-		return $this->where('active', true)->orderby(NULL, 'RAND()')->find();
+		return $this->orderby(NULL, 'RAND()')->find();
 	}
 	
 	
