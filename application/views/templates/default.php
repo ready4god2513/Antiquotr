@@ -4,6 +4,7 @@
 <title>AntiQuotr | Did they really say that?!</title>
 <meta name="description" content="Some of the best quotations in the world are out of context.  We do it on purpose." />
 <meta name="keywords" content="Great Quotes, Funny Quotations, Anti-Quotes, Humor, Quotes out of Context" />
+<meta name="google-site-verification" content="xMtxQs-T1Jg-kAwCF6Wu8FSZo6wWoh2S_vhdNx4MqI4" />
 <link rel="alternate" type="application/rss+xml" title="AntiQuotr Feed" href="<?=url::site('feed')?>" />
 <?=html::stylesheet('public/css/application')?>
 </head>
