@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>AntiQuotr | Did they really say that?!</title>
+<title>AntiQuotr | Insane. Funny. Quotes</title>
 <meta name="description" content="Some of the best quotations in the world are out of context.  We do it on purpose." />
 <meta name="keywords" content="Great Quotes, Funny Quotations, Anti-Quotes, Humor, Quotes out of Context" />
 <meta name="google-site-verification" content="xMtxQs-T1Jg-kAwCF6Wu8FSZo6wWoh2S_vhdNx4MqI4" />
